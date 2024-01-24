@@ -1,0 +1,15 @@
+<section id="popular-pizzas">
+  <br><br>
+  <h3><strong>NUESTRAS PIZZAS MÁS POPULARES SON:</strong></h3>
+  <div class="popular-pizzas">
+    <div *ngFor="let pizza of pizzas" class="pizza-box">
+      <img [src]="pizza.image" [alt]="pizza.name">
+      <div class="pizza-info">
+        <a *ngIf="pizza.link; else noLink" [href]="pizza.link" class="pizza-button">{{ pizza.name }}</a>
+        <ng-template #noLink>
+          <a class="pizza-button">{{ pizza.name }}</a>
+        </ng-template>
+      </div>
+    </div>
+  </div>
+</section>
