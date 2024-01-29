@@ -18,7 +18,7 @@
     background-color: #fff;
     border: 1px solid $color-borde;
     border-radius: 5px;
-    position: relative; 
+    position: relative;
 }
 
 .pizza-box img {
@@ -49,4 +49,16 @@
 
 .pizza-button:hover {
     background-color: $color-hover;
+}
+
+.pizza-agregar-carrito {
+    background-color: $color-texto;
+    color: $color-primario;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin-right: 10px;
 }

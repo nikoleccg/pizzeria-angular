@@ -1,15 +1,12 @@
 <section id="popular-pizzas">
   <br><br>
   <h3><strong>NUESTRAS PIZZAS MÁS POPULARES SON:</strong></h3>
+  <p>La cantidad de productos: {{ myShoppingCart.length }}</p>
+  <p>El total de los productos seleccionados es: {{ total }} Bs.</p>
   <div class="popular-pizzas">
-    <div *ngFor="let pizza of pizzas" class="pizza-box">
-      <img [src]="pizza.image" [alt]="pizza.name">
-      <div class="pizza-info">
-        <a *ngIf="pizza.link; else noLink" [href]="pizza.link" class="pizza-button">{{ pizza.name }}</a>
-        <ng-template #noLink>
-          <a class="pizza-button">{{ pizza.name }}</a>
-        </ng-template>
-      </div>
-    </div>
+      <app-pizza *ngFor="let pizza of pizzas" class="pizza-box"
+        [product]="pizza"
+        (addedProduct)="onAddToShoppingCart($event)"
+      ></app-pizza>
   </div>
 </section>

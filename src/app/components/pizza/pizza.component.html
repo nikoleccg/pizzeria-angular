@@ -1,0 +1,7 @@
+<img [src]="product.img" [alt]="product.name">
+<div class="pizza-info">
+  <a *ngIf="product.link" [href]="product.link" class="pizza-button">{{ product.name }}</a>
+  <a class="pizza-button">{{ product.name }}</a>
+  <hr>
+  <a class="pizza-agregar-carrito" (click)="onAddToCart()">Agregar al carrito</a>
+</div>
