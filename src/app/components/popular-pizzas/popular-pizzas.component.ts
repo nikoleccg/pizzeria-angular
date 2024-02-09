@@ -41,7 +41,7 @@ ngOnInit(): void {
   onAddToShoppingCart(product: Product){
     this.myShoppingCart.push(product)
     console.log(this.myShoppingCart)
-    this.total = this.myShoppingCart.reduce((sum, item) => sum + item.price, 0);
+    this.total = this.myShoppingCart.reduce((sum, item) => sum + Math.round(item.price), 0);
     console.log(this.total)
   }
 }

@@ -1,7 +1,7 @@
 <img [src]="product.image" [alt]="product.title">
 <div class="pizza-info">
   <a *ngIf="product.link" [href]="product.link" class="pizza-button">{{ product.title }}</a>
-  <a class="pizza-button">{{ product.title }}</a>
+  <a class="pizza-button">{{ product.title|reduceString }} - {{ product.price|roundNumber }} Bs.</a>
   <hr>
   <a class="pizza-agregar-carrito" (click)="onAddToCart()">Agregar al carrito</a>
 </div>

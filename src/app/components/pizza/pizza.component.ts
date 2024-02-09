@@ -1,11 +1,13 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../../models/product.model';
 import { CommonModule } from '@angular/common';
+import { ReduceStringPipe } from '../../pipes/reduce-string.pipe';
+import { RoundNumberPipe } from '../../pipes/round-number.pipe';
 
 @Component({
   selector: 'app-pizza',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ReduceStringPipe, RoundNumberPipe],
   templateUrl: './pizza.component.html',
   styleUrl: './pizza.component.scss'
 })
