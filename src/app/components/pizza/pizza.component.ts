@@ -12,9 +12,10 @@ import { CommonModule } from '@angular/common';
 export class PizzaComponent {
   @Input() product : Product = {
     id: "",
+    title: "",
     name: "",
     price: 0,
-    img: ""
+    image: ""
   }
 
   @Output() addedProduct = new EventEmitter<Product>();
