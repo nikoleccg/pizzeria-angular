@@ -18,17 +18,11 @@ export class PopularPizzasComponent {
 
   pizzas: Product[] = [];
 
-  // pizzas:Product[] = [
-  //   { id: '1', name: 'Pizza champiñones y jamón serrano', img: '../assets/images/p1.png', price: 60 },
-  //   { id: '2', name: 'Pizza margarita', img: '../assets/images/p5.png', link: 'pizza_margarita.html', price: 70 },
-  //   { id: '3', name: 'Pizza camarones', img: '../assets/images/p4.png', price: 80 },
-  // ];
-
   constructor(
     private storeService: StoreService,
     private pizzasService: PizzasService
   ){
-    // this.myShoppingCart = this.storeService
+    this.myShoppingCart = this.storeService.getShoppingCart()
   }
 
 ngOnInit(): void {
@@ -39,9 +33,7 @@ ngOnInit(): void {
 }
 
   onAddToShoppingCart(product: Product){
-    this.myShoppingCart.push(product)
-    console.log(this.myShoppingCart)
-    this.total = this.myShoppingCart.reduce((sum, item) => sum + Math.round(item.price), 0);
-    console.log(this.total)
+    this.storeService.addProduct(product);
+    this.total = this.storeService.getTotal()
   }
 }
