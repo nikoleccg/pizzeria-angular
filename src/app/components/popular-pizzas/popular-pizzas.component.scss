@@ -1,0 +1,12 @@
+#popular-pizzas{
+    text-align: center;
+}
+
+.popular-pizzas {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+}

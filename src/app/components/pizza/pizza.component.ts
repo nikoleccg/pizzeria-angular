@@ -3,11 +3,12 @@ import { Product } from '../../models/product.model';
 import { CommonModule } from '@angular/common';
 import { ReduceStringPipe } from '../../pipes/reduce-string.pipe';
 import { RoundNumberPipe } from '../../pipes/round-number.pipe';
+import { HighlightDirective } from '../../directives/highlight.directive';
 
 @Component({
   selector: 'app-pizza',
   standalone: true,
-  imports: [CommonModule, ReduceStringPipe, RoundNumberPipe],
+  imports: [CommonModule, ReduceStringPipe, RoundNumberPipe, HighlightDirective],
   templateUrl: './pizza.component.html',
   styleUrl: './pizza.component.scss'
 })
